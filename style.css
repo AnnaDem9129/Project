@@ -1,0 +1,211 @@
+/* style.css - ОБЩИЕ стили для ВСЕХ страниц */
+
+@import url('fonts/main_font.css');
+
+* {
+    margin: 0;
+    font-family: 'StratosSkyeng', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Блок .content с фоновой картинкой и position: relative */
+.content {
+    /* Фоновая картинка */
+    background-image: url('images/background.jpg');
+    /* Фон не повторяется */
+    background-repeat: no-repeat;
+    /* Фон по центру */
+    background-position: center;
+    /* Растягиваем фон на весь блок */
+    background-size: cover;
+    /* Высота 100% от высоты экрана */
+    min-height: 100vh;
+    
+    /* Остальные стили */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    /* 9. position: relative для позиционирования кнопок внутри */
+    position: relative;
+}
+
+/* Класс для центрирования контента */
+.center {
+    /* Боковые отступы для центрирования */
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+}
+
+/* ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ НАВИГАЦИОННЫХ КНОПОК */
+.nav-button {
+    /* 1. Сделать ссылки блочными */
+    display: block;
+    /* 2. Цвет заднего фона ссылок: #894AFF */
+    background-color: #894AFF;
+    /* 3. Цвет текста ссылок белым */
+    color: white;
+    /* 4. Внутренний отступ по вертикали: 11px, по горизонтали: 30px */
+    padding: 11px 30px;
+    /* 5. Закругление в 50px */
+    border-radius: 50px;
+    /* 6. Отключить text-decoration */
+    text-decoration: none;
+    /* 7. Размер шрифта 38px */
+    font-size: 38px;
+    /* 8. Абсолютное позиционирование */
+    position: absolute;
+    /* Полужирный шрифт */
+    font-weight: bold;
+    /* Тень для кнопок */
+    box-shadow: 0 4px 15px rgba(137, 74, 255, 0.3);
+    /* Плавный переход */
+    transition: all 0.3s ease;
+    /* Курсор указатель */
+    cursor: pointer;
+    /* Без границ */
+    border: none;
+    /* Фиксированная ширина для одинакового размера */
+    min-width: 200px;
+    text-align: center;
+    /* 10. Позиционирование кнопок сверху */
+    top: 40px;
+}
+
+/* 11. Позиционирование от левого края для кнопки "Предыдущая страница" */
+.prev-button {
+    left: 50px;
+}
+
+/* 11. Позиционирование от правого края для кнопки "Следующая страница" */
+.next-button {
+    right: 50px;
+}
+
+/* Эффект при наведении */
+.nav-button:hover {
+    background-color: #9B5BFF;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(137, 74, 255, 0.4);
+}
+
+/* Эффект при нажатии */
+.nav-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(137, 74, 255, 0.3);
+}
+
+/* Общие стили для основного контента */
+.main-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для заголовков */
+h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 20px 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+p {
+    font-size: 22px;
+    color: #666;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: left;
+}
+
+img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 28px;
+        padding: 9px 25px;
+        min-width: 180px;
+        top: 30px;
+    }
+    
+    .prev-button {
+        left: 30px;
+    }
+    
+    .next-button {
+        right: 30px;
+    }
+    
+    .main-content {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        padding: 15px 0;
+    }
+    
+    h2 {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    .center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        font-size: 22px;
+        padding: 7px 20px;
+        min-width: 160px;
+        top: 20px;
+    }
+    
+    .prev-button {
+        left: 20px;
+    }
+    
+    .next-button {
+        right: 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        padding: 10px 0;
+    }
+}

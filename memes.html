@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мемы Гуся Василия</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Уникальные стили для memes.html */
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .meme-item {
+            text-align: center;
+            padding: 8px;
+        }
+        
+        .meme-item img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            margin: 16px 0;
+        }
+        
+        .meme-item img:hover { transform: scale(1.02); }
+        
+        @media (max-width: 768px) {
+            .meme-grid { grid-template-columns: 1fr; gap: 20px; }
+            .meme-item { padding: 6px; }
+            .meme-item img { margin: 12px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="content center">
+        <!-- Кнопка "Предыдущая страница" слева -->
+        <a href="./facts.html" class="nav-button prev-button">← Предыдущая страница</a>
+        <!-- Кнопка "Следующая страница" справа -->
+        <a href="./quotes.html" class="nav-button next-button">Следующая страница →</a>
+        
+        <div class="main-content">
+            <h1>Мои любимые мемы</h1>
+            
+            <div class="meme-grid">
+                <div class="meme-item">
+                    <img src="images/meme1.jpeg" alt="Мем про программирование">
+                    <!-- Убрана подпись: "Когда код работает с первого раза" -->
+                </div>
+                
+                <div class="meme-item">
+                    <img src="images/meme2.jpeg" alt="Мем про отладку">
+                    <!-- Убрана подпись: "Отладка vs Программирование" -->
+                </div>
+                
+                <div class="meme-item">
+                    <img src="images/meme3.png" alt="Мем про баги">
+                    <!-- Убрана подпись: "Это не баг, это фича!" -->
+                </div>
+                
+                <div class="meme-item">
+                    <img src="images/meme4.jpeg" alt="Мем про дедлайн">
+                    <!-- Убрана подпись: "Дедлайн завтра" -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

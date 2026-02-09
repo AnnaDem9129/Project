@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гусь Василий - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Уникальные стили для index.html */
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            font-size: 22px;
+            color: #333;
+            margin: 15px 0;
+            padding: 16px 24px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .feature-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            background-color: rgba(74, 144, 226, 0.1);
+        }
+        
+        .feature-item:before {
+            content: "➤";
+            position: absolute;
+            left: 20px;
+            color: #4a90e2;
+            font-size: 20px;
+        }
+        
+        p { margin: 15px 0; padding: 8px 0; }
+        
+        @media (max-width: 768px) {
+            .feature-item {
+                font-size: 18px;
+                padding: 12px 18px;
+                padding-left: 40px;
+                margin: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content center">
+        <!-- Кнопка "Следующая страница" справа -->
+        <a href="./facts.html" class="nav-button next-button">Следующая страница →</a>
+        
+        <div class="main-content">
+            <h1>Крутая личная страница</h1>
+            <h2>Гуся Василия</h2>
+            
+            <p>Привет. Это мой проект по изучению фронта, и в нём я хочу рассказать о себе крутые факты и потренировать мой код стайл.</p>
+            <p>На страничках ты найдешь:</p>
+            
+            <ul class="features-list">
+                <li class="feature-item">Крутые факты обо мне</li>
+                <li class="feature-item">Мои любимые мемы</li>
+                <li class="feature-item">Мои любимые цитаты</li>
+            </ul>
+            
+            <!-- Убрано предложение: "Исследуй навигационные кнопки, чтобы перейти к интересующему тебя разделу!" -->
+            
+            <img src="images/goose.jpeg" alt="Гусь Василий">
+        </div>
+    </div>
+</body>
+</html>

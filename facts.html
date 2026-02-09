@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Факты о Гусе Василии</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Уникальные стили для facts.html */
+        .numbered-list {
+            list-style-type: none;
+            counter-reset: fact-counter;
+            padding: 0;
+            margin: 40px 0 30px 0;
+        }
+        
+        .numbered-item {
+            counter-increment: fact-counter;
+            font-size: 20px;
+            color: #444;
+            margin: 22px 0;
+            padding: 20px 25px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #9b59b6;
+            position: relative;
+            transition: all 0.3s ease;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .numbered-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            background-color: rgba(155, 89, 182, 0.05);
+        }
+        
+        .numbered-item:before {
+            content: counter(fact-counter);
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #9b59b6, #3498db);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.3);
+        }
+        
+        .numbered-item:nth-child(2):before { background: linear-gradient(135deg, #3498db, #2ecc71); }
+        .numbered-item:nth-child(3):before { background: linear-gradient(135deg, #e74c3c, #e67e22); }
+        .numbered-item:nth-child(4):before { background: linear-gradient(135deg, #f1c40f, #e67e22); }
+        .numbered-item:nth-child(5):before { background: linear-gradient(135deg, #1abc9c, #2ecc71); }
+        
+        @media (max-width: 768px) {
+            .numbered-item { font-size: 17px; padding: 16px 20px; margin: 18px 0; margin-left: 20px; }
+            .numbered-item:before { width: 40px; height: 40px; font-size: 18px; left: -20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="content center">
+        <!-- Кнопка "Предыдущая страница" слева -->
+        <a href="./index.html" class="nav-button prev-button">← Предыдущая страница</a>
+        <!-- Кнопка "Следующая страница" справа -->
+        <a href="./memes.html" class="nav-button next-button">Следующая страница →</a>
+        
+        <div class="main-content">
+            <h1>Крутые факты обо мне</h1>
+            
+            <!-- Убраны: "Философия Гуся Василия" и "Технические факты" -->
+            <!-- Остался только нумерованный список -->
+            <ol class="numbered-list">
+                <li class="numbered-item">Я не шиплю. Я предупреждаю. Если ты это услышал — значит, я уже дал тебе шанс.</li>
+                <li class="numbered-item">Я не хожу — я дефилирую. Да, так ходят только те, кто знает, что он главный персонаж.</li>
+                <li class="numbered-item">Если я смотрю на тебя долго — не пугайся. Я просто решаю: ты мой союзник или будущая жертва.</li>
+                <li class="numbered-item">Я не нападаю первым. Я просто всегда готов ко второму раунду. И к третьему тоже.</li>
+                <li class="numbered-item">Я гусь, но интеллект у меня как у финального босса. Поэтому будь вежлив — побочные квесты я выдаю редко.</li>
+            </ol>
+            
+            <!-- Убраны все технические факты -->
+        </div>
+    </div>
+</body>
+</html>
